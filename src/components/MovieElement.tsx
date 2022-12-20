@@ -16,10 +16,6 @@ export const MovieElement = ({ Title, Poster }: Movie) => {
         className="movieElement"
         onMouseEnter={() => {
           if (ref.current) {
-            console.log();
-            console.log(ref.current.getBoundingClientRect());
-          }
-          if (ref.current) {
             const position = ref.current.getBoundingClientRect();
             if (screenWidth - (position.x + position.width) < 0) {
               setInViewPort(false);
@@ -42,7 +38,13 @@ export const MovieElement = ({ Title, Poster }: Movie) => {
         className={`infoModal${inViewPort ? "" : " leftModal"}`}
       >
         <p>{Title}</p>
-        <img src={Poster} alt="Poster" />
+        <img
+          src={Poster}
+          alt="Poster"
+          onMouseEnter={() => {
+            if (ref.current) ref.current.style.visibility = "hidden";
+          }}
+        />
       </div>
     </div>
   );
