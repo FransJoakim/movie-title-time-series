@@ -14,7 +14,7 @@ export const fetchMovies = async (searchValue: string) => {
   };
 
   const movieData = fetch(
-    `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_APIKEY}&s=${searchValue}`
+    `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_APIKEY}&s=${searchValue}`
   )
     .then((res) => res.json())
     .then((data) => sortByYear(data.Search))
