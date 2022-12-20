@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="app">
       <div className="search">
-        <p>Try the movie-title-time-series search...</p>
+        <p>Try a movie-title-time-series search...</p>
         <input
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
