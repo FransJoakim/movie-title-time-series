@@ -9,7 +9,8 @@ export default function Graph(timeSeriesData: TimeSeriesData) {
   );
 
   const createTimeSeriesElements = () => {
-    const width = screenWidth / Object.keys(timeSeriesData).length / 1.1;
+    let width = screenWidth / Object.keys(timeSeriesData).length / 1.1;
+    if (width > 50) width = 50;
     const newElements = [];
     for (const [year, movieData] of Object.entries(timeSeriesData)) {
       const TimeSeriesElement = (

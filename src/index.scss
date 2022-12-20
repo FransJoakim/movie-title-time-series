@@ -102,4 +102,23 @@ body {
       margin-left: 0.2rem;
     }
   }
+
+  .footer {
+    position: absolute;
+    bottom: 1rem;
+    color: gray;
+    font-size: small;
+
+    span {
+      font-size: x-small;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:visited {
+        color: gray;
+      }
+    }
+  }
 }

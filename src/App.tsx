@@ -32,7 +32,9 @@ function App() {
   return (
     <div className="app">
       <div className="search">
-        <p>Try a movie-title-time-series search...</p>
+        <p>
+          Try a <b>movie-title-time-series</b> search...
+        </p>
         <input
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
@@ -40,6 +42,10 @@ function App() {
         <button onClick={() => fetchFunctionRef.current()}>Search</button>
       </div>
       <Graph {...timeSeriesData} />
+      <footer className="footer">
+        <span>Powered by</span>{" "}
+        <a href="https://www.omdbapi.com/">The Open Movie Database</a>
+      </footer>
     </div>
   );
 }
