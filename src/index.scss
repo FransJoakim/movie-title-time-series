@@ -62,7 +62,7 @@ body {
         border-radius: 6px;
         font-size: 0.8rem;
         z-index: 5;
-        margin-top: -20.9rem;
+        margin-top: -21.2rem;
         margin-left: 1.6rem;
 
         p {
@@ -71,7 +71,7 @@ body {
         }
 
         img {
-          height: 25rem;
+          height: 25.8rem;
         }
 
         &::after {
@@ -83,6 +83,15 @@ body {
           transform: rotate(90deg);
           top: 70.5%;
           right: 100%;
+        }
+      }
+
+      .leftModal {
+        margin-left: -20.5rem;
+
+        &::after {
+          transform: rotate(-90deg);
+          left: 100%;
         }
       }
     }
